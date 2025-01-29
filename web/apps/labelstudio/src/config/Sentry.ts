@@ -4,22 +4,22 @@ import type { RouterHistory } from "@sentry/react/build/types/reactrouter";
 import { Route } from "react-router-dom";
 
 export const initSentry = (history: RouterHistory) => {
-  if (APP_SETTINGS.debug === false) {
-    setTags();
-    Sentry.init({
-      dsn: "https://5f51920ff82a4675a495870244869c6b@o227124.ingest.sentry.io/5838868",
-      integrations: [
-        Sentry.browserTracingIntegration(),
-        ReactSentry.reactRouterV5BrowserTracingIntegration({ history }),
-      ],
-      environment: process.env.NODE_ENV,
-      // Set tracesSampleRate to 1.0 to capture 100%
-      // of transactions for performance monitoring.
-      // We recommend adjusting this value in production
-      tracesSampleRate: 0.25,
-      release: getVersion(),
-    });
-  }
+  // if (APP_SETTINGS.debug === false) {
+  //   setTags();
+  //   Sentry.init({
+  //     dsn: "https://5f51920ff82a4675a495870244869c6b@o227124.ingest.sentry.io/5838868",
+  //     integrations: [
+  //       Sentry.browserTracingIntegration(),
+  //       ReactSentry.reactRouterV5BrowserTracingIntegration({ history }),
+  //     ],
+  //     environment: process.env.NODE_ENV,
+  //     // Set tracesSampleRate to 1.0 to capture 100%
+  //     // of transactions for performance monitoring.
+  //     // We recommend adjusting this value in production
+  //     tracesSampleRate: 0.25,
+  //     release: getVersion(),
+  //   });
+  // }
 };
 
 const setTags = () => {

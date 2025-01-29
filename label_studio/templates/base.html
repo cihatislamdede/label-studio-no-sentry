@@ -30,14 +30,14 @@
   {% block app-scripts %}
   {% endblock %}
 
-  <script
+  {% comment %} <script
    src="https://browser.sentry-cdn.com/5.17.0/bundle.min.js"
    integrity="sha384-lowBFC6YTkvMIWPORr7+TERnCkZdo5ab00oH5NkFLeQUAmBTLGwJpFjF6djuxJ/5"
    crossorigin="anonymous"></script>
 
   <script nonce="{{request.csp_nonce}}">
     window.exports = () => {};
-  </script>
+  </script> {% endcomment %}
 
   {% block page_labeling %}
     <title>Label Studio</title>
